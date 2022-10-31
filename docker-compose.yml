@@ -2,8 +2,8 @@ version: "3.1"
 
 services:
   app:
-    container_name: app-api
-    image: app-api
+    container_name: todo-api
+    image: todo-api
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
     environment:
       - SECRET_KEY_BASE=development
       - RAILS_ENV=development
-      - DATABASE_NAME=app-api
+      - DATABASE_NAME=todo-api
       - DATABASE_HOST=postgres
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
